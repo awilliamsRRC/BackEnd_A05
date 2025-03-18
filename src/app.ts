@@ -1,16 +1,28 @@
 // import the express application and type definition
 import express, { Express,Request,Response } from "express";
 import morgan from "morgan";
-import employeeRoutes from "./api/v1/routes/employeeRoutes";
-import branchRoutes from "./api/v1/routes/branchRoutes";
-import setupSwagger from "../config/swagger";
-import errorHandler from "./api/v1/middleware/errorHandler";
 import dotenv from "dotenv";
+import helmet from "helmet";
 
 // Load environment variables BEFORE your internal imports!
 dotenv.config();
 
+
+import employeeRoutes from "./api/v1/routes/employeeRoutes";
+import branchRoutes from "./api/v1/routes/branchRoutes";
+import setupSwagger from "../config/swagger";
+import errorHandler from "./api/v1/middleware/errorHandler";
+
 const app: Express = express();
+
+app.use(helmet());
+// Configure specific protections using Helmet
+
+// Protect against Cross-Site Scripting (XSS) attacks
+app.use(helmet.xssFilter()); 
+// Prevent clickjacking by denying iframe embedding
+app.use(helmet.frameguard({ action: 'deny' })); 
+
 setupSwagger(app);
 
 app.use(morgan("combined"));
