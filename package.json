@@ -1,7 +1,7 @@
 {
   "name": "employee_directory_m03",
   "version": "1.0.0",
-  "main": "src/api/v1/services/branchService.ts",
+  "main": "config/firebaseConfig.ts",
   "directories": {
     "test": "test"
   },

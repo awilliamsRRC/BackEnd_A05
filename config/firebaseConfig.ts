@@ -9,6 +9,7 @@ import {
 import { getFirestore, Firestore } from "firebase-admin/firestore";
 import { getAuth, Auth } from "firebase-admin/auth";
 
+
 const getFirebaseConfig = (): AppOptions => {
     // extract the Firebase credentials from environment variables
     const { FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY } =
@@ -24,6 +25,9 @@ const getFirebaseConfig = (): AppOptions => {
             "Missing Firebase configuaration. Please check your environment variables"
         );
     }
+    console.log(process.env.FIREBASE_PROJECT_ID);
+    console.log(process.env.FIREBASE_CLIENT_EMAIL);
+    console.log(process.env.FIREBASE_PRIVATE_KEY);
 
     const serviceAccount: ServiceAccount = {
         projectId: FIREBASE_PROJECT_ID,

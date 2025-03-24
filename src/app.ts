@@ -7,9 +7,6 @@ import cors from "cors";
 
 // Load environment variables BEFORE your internal imports!
 dotenv.config();
-console.log(process.env.FIREBASE_PROJECT_ID);
-console.log(process.env.FIREBASE_CLIENT_EMAIL);
-console.log(process.env.FIREBASE_PRIVATE_KEY);
 
 
 import employeeRoutes from "./api/v1/routes/employeeRoutes";
@@ -54,6 +51,12 @@ app.get("/api/v1/health", (req:Request,res:Response) => {
     
     });
 });
+
+// Add logging to check CORS headers
+app.use((req, res, next) => {
+    console.log('CORS Origin:', req.headers.origin); 
+    next();
+  });
 
 app.use("/api/v1/employees", employeeRoutes);
 app.use("/api/v1/branches", branchRoutes);
