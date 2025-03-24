@@ -3,12 +3,12 @@
   "info": {
     "title": "Task Management API Documentation",
     "version": "1.0.0",
-    "description": "This is the API documentation for the Task Management applciation."
+    "description": "This is the API documentation for the Task Management application."
   },
-  "server": [
+  "servers": [
     {
       "url": "http://localhost:3000/api/v1",
-      "description": "Local Server"
+      "description": "Local server"
     }
   ],
   "components": {
@@ -49,6 +49,11 @@
       }
     }
   },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
   "paths": {
     "/branch": {
       "get": {

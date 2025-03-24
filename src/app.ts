@@ -7,6 +7,9 @@ import cors from "cors";
 
 // Load environment variables BEFORE your internal imports!
 dotenv.config();
+console.log(process.env.FIREBASE_PROJECT_ID);
+console.log(process.env.FIREBASE_CLIENT_EMAIL);
+console.log(process.env.FIREBASE_PRIVATE_KEY);
 
 
 import employeeRoutes from "./api/v1/routes/employeeRoutes";
