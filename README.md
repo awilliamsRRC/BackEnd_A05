@@ -1,3 +1,5 @@
+[Public API Documentation]: https://awilliamsrrc.github.io/BackEnd_A05/api-docs/index.html
+
 # Employee Directory and Branch Management API
 Project Overview
 Employee Directory and Branch Management API are RESTful APIs using Node.js, Express, and TypeScript to manage the employee directory and branch locations of PiXELL-River Financial.This API allows users to interact with directories, such as creating, updating, deleting, and retrieving directorires. It supports basic firestore authentication and provides endpoints to manage directory information.
