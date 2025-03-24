@@ -48,8 +48,8 @@ FIREBASE_PRIVATE_KEY=your_private_key
 The application will be running on http://localhost:3000.
 
 # 1. Example Requests and Responses for Branches API
-##Endpoint: Get All Branches
-###Method: GET
+## Endpoint: Get All Branches
+### Method: GET
 
 **URL: /api/v1/branches**
 
@@ -85,10 +85,10 @@ Response Example (Status 200 OK):
         "phone": "(555) 987-6543"
     }
 ]
-#Endpoint: Create a New Branch
-##Method: POST
+# Endpoint: Create a New Branch
+## Method: POST
 
-URL: /api/v1/branches
+**URL: /api/v1/branches**
 
 Request Example (Body):
 
@@ -121,8 +121,8 @@ Response Example (Status 201 Created):
     "address": "789 Oak St, Villageville, State, 11223",
     "phone": "(555) 111-2233"
 }
-#Endpoint: Update a Branch
-##Method: PUT
+# Endpoint: Update a Branch
+## Method: PUT
 
 URL: /api/v1/branches/{id}
 
@@ -157,8 +157,8 @@ Response Example (Status 200 OK):
     "address": "123 Main St, Cityville, State, 54321",
     "phone": "(555) 123-7654"
 }
-#Endpoint: Delete a Branch
-##Method: DELETE
+# Endpoint: Delete a Branch
+## Method: DELETE
 
 URL: /api/v1/branches/{id}
 
@@ -186,8 +186,8 @@ No response body on success.
 
 #2. Example Requests and Responses for Employees API
 
-##Endpoint: Get All Employees
-###Method: GET
+## Endpoint: Get All Employees
+### Method: GET
 
 URL: /api/v1/employees
 
@@ -230,8 +230,8 @@ Response Example (Status 200 OK):
     }
 ]
 
-#Endpoint: Create a New Employee
-##Method: POST
+# Endpoint: Create a New Employee
+## Method: POST
 
 URL: /api/v1/employees
 
@@ -272,8 +272,8 @@ Response Example (Status 201 Created):
     "phone": "(555) 111-2233",
     "branchId": 1
 }
-#Endpoint: Update an Employee
-##Method: PUT
+# Endpoint: Update an Employee
+## Method: PUT
 
 URL: /api/v1/employees/{id}
 
@@ -314,9 +314,9 @@ Response Example (Status 200 OK):
     "phone": "(555) 111-4455",
     "branchId": 1
 }
-#Endpoint: Delete an Employee
+# Endpoint: Delete an Employee
 
-##Method: DELETE
+## Method: DELETE
 
 URL: /api/v1/employees/{id}
 
@@ -343,9 +343,9 @@ Response Example (Status 204 No Content):
 
 No response body on success.
 
-#Secure Setup Instructions
+# Secure Setup Instructions
 
-##API keys and environment variables.
+## API keys and environment variables.
 
 Do not commit. .gitignore both files and enter your api info in .env files, it will automatically connect. Place .env in root directory.
 
